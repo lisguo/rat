@@ -1,1 +1,2 @@
-# RAT - Resume Automation Tool
+# resuume-gen
+A Resume Generator CLI Tool

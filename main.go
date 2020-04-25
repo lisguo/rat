@@ -15,8 +15,8 @@ limitations under the License.
 */
 package main
 
-import "github.com/lisguo/rat/cmd"
+import "github.com/lisguo/resume-gen/commands"
 
 func main() {
-  cmd.Execute()
+  commands.Execute()
 }
