@@ -19,20 +19,22 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
+
+	lib "github.com/lisguo/resume-gen/lib"
 )
 
 // createCmd represents the create command
 var createCmd = &cobra.Command{
 	Use:   "create",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "Create a resume using a particular template",
+	Long: `
+	resume-gen is a resume generator CLI tool that uses LaTeX resume templates to  
+	create professional resumes.
+	
+	To start try resume-gen create sample_1 -f sample_configs/tech.yaml`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("create called")
+		lib.WriteDocumentClass("sample_1")
 	},
 }
 

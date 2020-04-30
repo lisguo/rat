@@ -82,9 +82,9 @@ func initConfig() {
       os.Exit(1)
     }
 
-    // Search config in home directory with name ".rat" (without extension).
+    // Search config in home directory with name ".yaml" (without extension).
     viper.AddConfigPath(home)
-    viper.SetConfigName(".rat")
+    viper.SetConfigName(".yaml")
   }
 
   viper.AutomaticEnv() // read in environment variables that match

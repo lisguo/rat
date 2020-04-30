@@ -1,0 +1,15 @@
+personal:
+  name: John Doe
+  address: 123 Main Street, New York, NY 10013
+  phone: 123-456-7890
+  email: john.doe@company.com
+
+experience:
+  - title: Software Engineer
+    company: Tech Startup
+    start_date: January 1, 2018
+    end_date: Current
+    description:
+      - Worked on a team of 5 to develop the coolest cloud platform
+      - Assisted in architecture and design reviews for efficiency and resiliency
+      - Some other awesome thing I did

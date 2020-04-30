@@ -1,7 +1,7 @@
-FROM golang:1.13
+FROM golang:1.14
 
 COPY . /resume-gen
 WORKDIR /resume-gen
 RUN make build
 
-CMD ["bin/resume-gen"]
+ENTRYPOINT ["bin/resume-gen"]
