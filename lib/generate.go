@@ -8,7 +8,7 @@ import (
 	"fmt"
 )
 
-func WriteDocumentClass(documentClass string){
+func WriteDocumentClass(documentClass string) {
 	fmt.Println("Writing documentclass!")
 	strTemplate := "\\documentclass{%s}"
 	fmt.Sprintf(strTemplate, documentClass)
