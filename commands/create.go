@@ -17,8 +17,10 @@ package commands
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 
 	lib "github.com/lisguo/resume-gen/lib"
 )
@@ -34,7 +36,25 @@ var createCmd = &cobra.Command{
 	To start try resume-gen create sample_1 -f sample_configs/tech.yaml`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("create called")
-		lib.WriteDocumentClass("sample_1")
+		// Create file
+		f, err := os.Create("test.tex")
+		if err != nil {
+			panic(err)
+		}
+
+		lib.WriteHeader(f)
+
+		// Write Contact
+		name := viper.GetString("personal.name")
+		address := viper.GetString("personal.address")
+		phone := viper.GetString("personal.phone")
+		email := viper.GetString("personal.email")
+		lib.WriteContactInfo(f, name, address, phone, email)
+		lib.WriteBeginDocument(f)
+
+		// Write Education
+		lib.WriteBeginSection(f, "Education")
+
 	},
 }
 

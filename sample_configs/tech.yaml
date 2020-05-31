@@ -4,11 +4,19 @@ personal:
   phone: 123-456-7890
   email: john.doe@company.com
 
+education:
+  institution: Stony Brook University
+  start_date: August 2014
+  end_date: Present
+  degree: Bachelor's of Science
+  department: Computer Science
+  gpa: 3.2
+
 experience:
   - title: Software Engineer
     company: Tech Startup
     start_date: January 1, 2018
-    end_date: Current
+    end_date: Present
     description:
       - Worked on a team of 5 to develop the coolest cloud platform
       - Assisted in architecture and design reviews for efficiency and resiliency

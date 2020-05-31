@@ -17,8 +17,10 @@ package commands
 
 import (
 	"fmt"
-	"github.com/spf13/cobra"
 	"os"
+
+	lib "github.com/lisguo/resume-gen/lib"
+	"github.com/spf13/cobra"
 
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/spf13/viper"
@@ -87,5 +89,11 @@ func initConfig() {
 	// If a config file is found, read it in.
 	if err := viper.ReadInConfig(); err == nil {
 		fmt.Println("Using config file:", viper.ConfigFileUsed())
+	}
+
+	var config lib.Config
+	err := viper.Unmarshal(&config)
+	if err != nil {
+		panic(err)
 	}
 }
