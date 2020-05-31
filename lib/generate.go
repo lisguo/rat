@@ -58,7 +58,7 @@ func WriteContactInfo(f *os.File, name string, address string,
 func WriteEducation(f *os.File, institution string, startDate string,
 	endDate string, degree string, department string, gpa string) {
 	text := fmt.Sprintf(`
-	{\bf %s} \hfill {\em %s - %s} 
+	{\bf %s} \hfill {\em %s - %s}
 	\\ %s
 	\\ %s\\
 	`, institution, startDate, endDate, degree, department)
